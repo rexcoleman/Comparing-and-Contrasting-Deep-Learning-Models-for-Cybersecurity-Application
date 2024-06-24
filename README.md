@@ -621,7 +621,8 @@ QML has the potential to revolutionize cybersecurity through advanced encryption
 - Quantum computing technology is still in the early stages of development, with practical, scalable quantum computers not yet widely available.
 - Developing quantum-resistant algorithms is necessary to ensure long-term security in the quantum computing era.
 
-## 8. Model Comparison and Selection
+## 8. Model Selection Tables
+
 ### 8.1 Comparison Table of Deep Learning Models for Cybersecurity
 
 | Model                       | Accuracy | Complexity | Training Time | Inference Time | Robustness | Data Requirements | Scalability | Use Case Fit                          | Data Type                          |
@@ -651,6 +652,66 @@ QML has the potential to revolutionize cybersecurity through advanced encryption
 | Federated Learning          | High     | High       | Slow          | Medium         | High       | High              | High        | Collaborative learning across devices  | Decentralized, any type of data    |
 | Adversarial ML              | Medium   | High       | Medium        | Medium         | Medium     | Medium            | Medium      | Improving model robustness             | Any type of data                   |
 | Quantum ML                  | Very High| Very High  | Very Slow     | Slow           | Very High  | High              | Low         | Cutting-edge research, future potential| Quantum data, any type of data     |
+
+
+### 8.2 Model Evaluation by Data Type without Data Conversion
+
+| Data Type                     | CNNs | MLPs | ResNets | RNNs | LSTMs | GRUs | Autoencoders | VAEs | GANs | GNNs | GCNs | Standard RL | DQNs | CapsNets | SNNs | Neural ODEs | Hypernetworks | Ensemble Learning | MDNs | Transfer Learning | Few-Shot Learning | Self-Supervised Learning | Federated Learning | Adversarial ML | Quantum ML |
+|-------------------------------|------|------|---------|------|-------|------|--------------|------|------|------|------|-------------|------|----------|------|--------------|----------------|-------------------|------|-------------------|-------------------|------------------------|--------------------|----------------|------------|
+| Image, spatial data           | High | Low  | High    | Low  | Low   | Low  | Medium       | Medium| High | Low  | Low  | Low         | Low  | High     | Low  | Medium       | Medium         | High              | Medium| High              | Medium            | Medium                 | Medium             | Medium         | High       |
+| Structured data               | Low  | Medium| Low    | Low  | Low   | Low  | High         | High  | High | Low  | Low  | Low         | Low  | Low      | Low  | Low          | Medium         | High              | High | High              | Medium            | Medium                 | Medium             | Medium         | High       |
+| Time series, sequential data  | Low  | Low  | Low     | High | High  | High | Medium       | Medium| Medium| Low  | Low  | Low         | Low  | Low      | Low  | High         | Medium         | Medium            | Medium| Medium            | Medium            | Medium                 | Medium             | Medium         | High       |
+| Graph-structured data         | Low  | Low  | Low     | Low  | Low   | Low  | Medium       | Medium| Medium| High | High | Low         | Low  | Low      | Low  | Medium       | Medium         | Medium            | Medium| Medium            | Medium            | Medium                 | Medium             | Medium         | High       |
+| Interaction data              | Low  | Low  | Low     | Low  | Low   | Low  | Low          | Low   | Low  | Low  | Low  | High        | High | Low      | Low  | Low          | Low            | Low               | Low   | Low               | Low               | Low                    | Low                | Low            | High       |
+| Any type of data              | Medium| Medium| Medium| Medium| Medium| Medium| High        | High  | High | Medium| Medium| Medium     | Medium| Medium   | Medium| Medium      | Medium         | Very High         | Medium| High              | Medium            | Medium                 | High               | Medium         | High       |
+| Small amounts of any data     | Medium| Medium| Medium| Medium| Medium| Medium| Medium      | Medium| Medium| Medium| Medium| Medium     | Medium| Medium   | Medium| Medium      | Medium         | Medium            | Medium| High              | High              | Medium                 | Medium             | Medium         | High       |
+| Decentralized data            | Medium| Medium| Medium| Medium| Medium| Medium| Medium      | Medium| Medium| Medium| Medium| Medium     | Medium| Medium   | Medium| Medium      | Medium         | Medium            | Medium| Medium            | Medium            | Medium                 | High               | Medium         | High       |
+
+### Notes:
+
+- **High**: Model performs very well for this data type.
+- **Medium**: Model performs adequately for this data type.
+- **Low**: Model performs poorly for this data type or is not typically used.
+
+### 8.3 Data Type Conversion for Model Compatibility
+
+| Data Type               | CNNs                                                      | MLPs                               | ResNets                                                    | RNNs                                 | LSTMs                                | GRUs                                 | Autoencoders                                             | GANs                                                      | GNNs                                                      | GCNs                                                      |
+|-------------------------|-----------------------------------------------------------|------------------------------------|------------------------------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|
+| Network Data            | Convert to images using graph visualization tools         | Direct use with feature extraction | Convert to images using graph visualization tools           | Sequence representation of network traffic | Sequence representation of network traffic | Sequence representation of network traffic | Use feature vectors from network packets                   | Generate synthetic network traffic data using GANs         | Use graph structure directly                              | Use graph structure directly                              |
+| Time Series Data        | Create spectrograms or recurrence plots for image format  | Direct use with feature extraction | Create spectrograms or recurrence plots for image format    | Direct use as sequences             | Direct use as sequences             | Direct use as sequences             | Anomaly detection on time series data                      | Generate synthetic time series data using GANs            | Convert time series to graph representation                | Convert time series to graph representation                |
+| Text Data               | Convert to word embeddings and visualize as heatmaps      | Direct use with text embeddings    | Convert to word embeddings and visualize as heatmaps        | Use sequences of word embeddings    | Use sequences of word embeddings    | Use sequences of word embeddings    | Anomaly detection on text sequences                        | Generate synthetic text sequences using GANs              | Convert text relationships to graph structure              | Convert text relationships to graph structure              |
+| Image Data              | Direct use                                               | Feature extraction from images     | Direct use                                                 | Convert image sequences to pixel sequences | Convert image sequences to pixel sequences | Convert image sequences to pixel sequences | Anomaly detection on image features                        | Generate synthetic images using GANs                      | Extract features and convert to graph representation       | Extract features and convert to graph representation       |
+| Structured Data         | Convert to heatmaps or other visual formats               | Direct use with feature extraction | Convert to heatmaps or other visual formats                 | Convert to sequences if applicable   | Convert to sequences if applicable   | Convert to sequences if applicable   | Anomaly detection on structured data                       | Generate synthetic structured data using GANs             | Convert relationships to graph structure                   | Convert relationships to graph structure                   |
+| Graph Data              | Convert to image using graph visualization tools          | Feature extraction from graph metrics | Convert to image using graph visualization tools            | Convert graph sequences to node sequences | Convert graph sequences to node sequences | Convert graph sequences to node sequences | Anomaly detection on graph features                        | Generate synthetic graphs using GANs                      | Direct use                                                | Direct use                                                |
+
+### Notes:
+- **Direct Use**: The data type can be directly fed into the model without conversion.
+- **Feature Extraction**: Extract relevant features from the data before feeding into the model.
+- **Conversion Needed**: The data type needs to be transformed into another format before use.
+- **Anomaly Detection**: Autoencoders and GANs are often used for detecting anomalies in the respective data types.
+
+This table helps users understand how to prepare and convert various types of data for compatibility with different deep learning models, providing insights into potential preprocessing steps and the applicability of each model.
+
+### 8.4 Model Evaluation by Data Type with Data Conversion
+
+| Data Type               | CNNs                               | MLPs                              | ResNets                            | RNNs                              | LSTMs                             | GRUs                              | Autoencoders                      | GANs                               | GNNs                               | GCNs                               |
+|-------------------------|------------------------------------|-----------------------------------|------------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|------------------------------------|------------------------------------|------------------------------------|------------------------------------|
+| Network Data            | High (after conversion to images)  | Moderate                          | High (after conversion to images)  | High (after conversion to sequences) | High (after conversion to sequences) | High (after conversion to sequences) | High (for anomaly detection)       | High (for synthetic data)          | High (direct use)                  | High (direct use)                  |
+| Time Series Data        | High (after conversion to images)  | Moderate                          | High (after conversion to images)  | High (direct use)                 | High (direct use)                 | High (direct use)                 | High (for anomaly detection)       | High (for synthetic data)          | High (after conversion to graphs)  | High (after conversion to graphs)  |
+| Text Data               | High (after conversion to embeddings and images) | Moderate  | High (after conversion to embeddings and images) | High (direct use) | High (direct use) | High (direct use) | High (for anomaly detection) | High (for synthetic data) | High (after conversion to graphs)  | High (after conversion to graphs)  |
+| Image Data              | High (direct use)                  | Moderate                          | High (direct use)                  | Moderate (after conversion to sequences) | Moderate (after conversion to sequences) | Moderate (after conversion to sequences) | High (for anomaly detection)       | High (for synthetic data)          | Moderate (after feature extraction) | Moderate (after feature extraction) |
+| Structured Data         | High (after conversion to images)  | High                              | High (after conversion to images)  | Moderate (after conversion to sequences) | Moderate (after conversion to sequences) | Moderate (after conversion to sequences) | High (for anomaly detection)       | High (for synthetic data)          | High (after conversion to graphs)  | High (after conversion to graphs)  |
+| Graph Data              | High (after conversion to images)  | Moderate                          | High (after conversion to images)  | Moderate (after conversion to sequences) | Moderate (after conversion to sequences) | Moderate (after conversion to sequences) | High (for anomaly detection)       | High (for synthetic data)          | High (direct use)                  | High (direct use)                  |
+
+### Notes:
+- **High**: The model is highly effective for this data type, either directly or after the necessary conversion.
+- **Moderate**: The model is moderately effective for this data type and may require significant feature extraction or conversion.
+- **Low**: The model is not typically used for this data type or performs poorly even after conversion (not shown in the table as these are not primary models for such data).
+
+This updated table helps to understand the potential impact of the data conversion process on the model's effectiveness and provides a clearer picture of how well each model can handle different types of data after the necessary transformations.
+
+
+
 
 
 ### 8.2 Definitions
