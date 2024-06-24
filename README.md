@@ -41,12 +41,14 @@ The report emphasizes that the key to successful implementation of these models 
 7. [Adversarial and Quantum Models](#7-adversarial-and-quantum-models)
    - [7.1 Adversarial Machine Learning](#71-adversarial-machine-learning)
    - [7.2 Quantum Machine Learning](#72-quantum-machine-learning)
-8. [Model Comparison and Selection](#8-model-comparison-and-selection)
+8. [Model Selection Tables](#8-model-selection-tables)
    - [8.1 Comparison Table of Deep Learning Models for Cybersecurity](#81-comparison-table-of-deep-learning-models-for-cybersecurity)
-   - [8.2 Definitions](#82-definitions)
+   - [8.2 Model Evaluation by Data Type without Data Conversion](#82-model-evaluation-by-data-type-without-data-conversion)
+   - [8.3 Data Type Conversion for Model Compatibility](#83-data-type-conversion-for-model-compatibility)
+   - [8.4 Model Evaluation by Data Type with Data Conversion](#84-model-evaluation-by-data-type-with-data-conversion)
+   - [8.5 Definitions](#85-definitions)
 9. [Conclusion](#9-conclusion)
 10. [References](#10-references)
-
 
 
 # 1. Introduction
