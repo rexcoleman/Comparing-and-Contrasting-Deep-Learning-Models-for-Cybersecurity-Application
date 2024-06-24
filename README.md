@@ -42,10 +42,12 @@ The report emphasizes that the key to successful implementation of these models 
    - [7.1 Adversarial Machine Learning](#71-adversarial-machine-learning)
    - [7.2 Quantum Machine Learning](#72-quantum-machine-learning)
 8. [Model Comparison and Selection](#8-model-comparison-and-selection)
-   - [8.1 Feature-Based Comparison Table](#81-feature-based-comparison-table)
+   - [8.1 Comparison Table of Deep Learning Models for Cybersecurity](#81-comparison-table-of-deep-learning-models-for-cybersecurity)
    - [8.2 Definitions](#82-definitions)
 9. [Conclusion](#9-conclusion)
 10. [References](#10-references)
+
+
 
 ## 1. Introduction
 
